@@ -8,6 +8,10 @@ rm -v lindo-2.5.4.tar.gz
 # Install require libs
 sudo apt install libnss3 -y
 
+if [ -f "lindo" ]; then
+    # shotcut already exist
+    rm lindo
+fi
 ln -s lindo-2.5.4/Lindo lindo
 
 echo ""
