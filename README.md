@@ -25,4 +25,4 @@ For playing on lindo beta
 ```
 ./lindo-beta
 ```
-### ⚠ If you play on lindo after playing on lindo-beta, you will loose saved option in lindo-beta
+### ⚠ If you play on lindo after playing on lindo-beta, you will lose saved option in lindo-beta
