@@ -7,7 +7,7 @@ if [ -z $1 ]; then
 fi
 
 if [ $1 == 'beta' ]; then
-    version='2.6.0-beta.11'
+    version='2.6.0-beta.12'
 fi
 
 echo "Downloading lindo ${version}"
