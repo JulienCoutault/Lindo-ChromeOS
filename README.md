@@ -11,7 +11,7 @@ wget https://raw.githubusercontent.com/JulienCoutault/Lindo-ChromeOS/master/inst
 ./install-lindo.sh
 ```
 
-You can also install and play lindo-beta side by side
+You can also install and play lindo-beta side by side to lindo
 ```
 ./install-lindo.sh beta
 ```
@@ -25,4 +25,4 @@ For playing on lindo beta
 ```
 ./lindo-beta
 ```
-### ⚠ If you play on lindo after playing on lindo-beta, you will lose saved option in lindo-beta
+### ⚠ If you play on lindo after playing on lindo-beta, you will lose all saved options in lindo-beta
