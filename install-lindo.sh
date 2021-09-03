@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version='2.5.4'
+version='2.6.0'
 
 if [ -z $1 ]; then
     $1 = 'a'
