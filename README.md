@@ -11,7 +11,7 @@ wget https://raw.githubusercontent.com/JulienCoutault/Lindo-ChromeOS/master/inst
 ./install-lindo.sh
 ```
 
-You can also choose the version you want download
+You can also choose the version you want to download
 ```
 ./install-lindo.sh 2.7.0
 ```
