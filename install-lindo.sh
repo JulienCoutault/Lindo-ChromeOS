@@ -1,9 +1,13 @@
 #!/bin/bash
 
-
-#get last version
-version=$(curl --silent "https://api.github.com/repos/prixe/lindo/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
-version="${version:1}"
+if [ -z $1 ]; then
+    # Get last version
+    version=$(curl --silent "https://api.github.com/repos/prixe/lindo/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+    version="${version:1}"
+else
+    # Get given version
+    version=$1
+fi
 
 
 echo "Downloading lindo ${version}"
