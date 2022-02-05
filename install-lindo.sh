@@ -1,14 +1,10 @@
 #!/bin/bash
 
-version='2.7.0'
 
-if [ -z $1 ]; then
-    $1 = 'a'
-fi
+#get last version
+version=$(curl --silent "https://api.github.com/repos/prixe/lindo/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+version="${version:1}"
 
-if [ $1 == 'beta' ]; then
-    version='2.6.0-beta.13'
-fi
 
 echo "Downloading lindo ${version}"
 
@@ -20,25 +16,13 @@ rm -v lindo-${version}.tar.gz
 # Install require libs
 sudo apt install libnss3 -y
 
-if [ $1 == 'beta' ]; then
-    if [ -f "lindo-beta" ]; then
-        # shotcut already exist
-        rm lindo-beta
-    fi
-    ln -s lindo-${version}/Lindo lindo-beta
-else
-    if [ -f "lindo" ]; then
-        # shotcut already exist
-        rm lindo
-    fi
-    ln -s lindo-${version}/Lindo lindo
+if [ -f "lindo" ]; then
+    # shotcut already exist
+    rm lindo
 fi
+ln -s lindo-${version}/Lindo lindo
 
 echo ""
 echo "--------------------------------------------------"
 echo "Lindo ${version} was downloaded"
-if [ $1 == 'beta' ]; then
-    echo "To play write : ./lindo-beta"
-else
-    echo "To play write : ./lindo"
-fi
+echo "To play write : ./lindo"
